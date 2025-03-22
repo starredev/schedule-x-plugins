@@ -22,10 +22,10 @@ npm install @starredev/schedule-x-plugins
 ```
 
 ## ⚠️ Don’t Forget to Instantiate Required Plugins
-Some plugins depend on shared services such as eventsServicePlugin and calendarControls. Make sure to instantiate them and pass them in before initializing your calendar.
+Some plugins depend on shared services such as eventsServicePlugin and calendarControls. Make sure to instantiate them and pass them in before initializing your calendar. You can get them below
 
-[Events Service Plugin](https://schedule-x.dev/docs/calendar/plugins/events-service)
-[Calendar controls](https://schedule-x.dev/docs/calendar/plugins/calendar-controls)
+- [Events Service Plugin](https://schedule-x.dev/docs/calendar/plugins/events-service)
+- [Calendar controls](https://schedule-x.dev/docs/calendar/plugins/calendar-controls)
 
 ```js
 const calendarApp = createCalendar({
