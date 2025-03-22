@@ -27,26 +27,69 @@ Some plugins depend on shared services such as eventsServicePlugin and calendarC
 - [Events Service Plugin](https://schedule-x.dev/docs/calendar/plugins/events-service)
 - [Calendar controls](https://schedule-x.dev/docs/calendar/plugins/calendar-controls)
 
-```js
-const calendarApp = createCalendar({
-    // Your calendar config...
 
-    plugins: [
-        eventsServicePlugin,
-        calendarControls,
-        new ScheduleXPlugin({
-            plugins: [
-                new CopyEventPlugin(eventsServicePlugin, (event: CalendarEvent) => {
-                    /* 
-                        { "id": 2, "start": "2023-12-23 06:00", "end": "2023-12-23 07:00", "title": "Event 2" }
-                    */
-                    console.log(event);
-                    eventsServicePlugin.add(event);
-                }),
-                new ZoomInPlugin(calendarControls)
-            ]
-        })
-    ]
-})
+### `Boilerplates`
+[VueJS Example](https://schedule-x.dev/docs/calendar/plugins/events-service)
+
+### `CopyEventPlugin`
+
+🧠 **Purpose**: Enables users to right-click and drag to **duplicate** existing events in the calendar.
+
+#### ✅ Features
+
+- Right-click on an event to begin copy-drag
+- Drag the cloned event to a new time slot
+- Automatically calculates updated start and end times
+- Executes a callback with the new event
+- Visual feedback on hover/drop target
+- Supports switch between days
+
+---
+
+#### 🧩 Usage
+```ts
+import { type CalendarEvent } from '@schedule-x/calendar'
+import { createEventsServicePlugin, type EventsServicePlugin } from '@schedule-x/events-service'
+import { CopyEventPlugin } from '@starredev/schedule-x-plugins';
+
+// Callback after an event is copied + repositioned
+const onEventCopied = (event: CalendarEvent) => {
+  console.log('Copied Event:', event);
+  // Optionally: save to backend or add to calendar
+};
+
+const eventsServicePlugin: EventsServicePlugin = createEventsServicePlugin()
+
+const copyPlugin = new CopyEventPlugin(eventsServicePlugin, onEventCopied);
 ```
 
+### `ZoomInPlugin`
+
+🔎 **Purpose**: Adds mouse wheel zooming (with `Ctrl`) to the calendar time grid.
+
+#### ✅ Features
+
+- `Ctrl + Mouse Wheel` zooms in and out
+- Configurable zoom factor, step, and height
+- Defaults provided — no setup needed!
+
+#### 🧩 Usage
+
+```ts
+import { ZoomInPlugin } from '@starredev/schedule-x-plugins';
+import { createCalendarControlsPlugin, type CalendarControlsPlugin } from '@schedule-x/calendar-controls'
+
+const calendarControls: CalendarControlsPlugin = createCalendarControlsPlugin()
+
+// Uses default zoom config
+const zoomPlugin = new ZoomInPlugin(calendarControls);
+
+// Optional: Custom zoom settings
+const zoomPluginCustom = new ZoomInPlugin(calendarControls, {
+  zoomFactor: 1,         // Initial zoom (default: 1)
+  minZoom: 0.5,          // Minimum zoom (default: 0.5)
+  maxZoom: 2,            // Maximum zoom (default: 2)
+  zoomStep: 0.2,         // Step per scroll (default: 0.2)
+  baseGridHeight: 900    // Base height in px (default: 900)
+});
+```
