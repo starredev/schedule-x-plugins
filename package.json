@@ -45,7 +45,7 @@
     "semantic-release": "^24.0.0",
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
-    "vue-tsc": "^2.0.0"
+    "vue-tsc": "^2.2.8"
   },
   "dependencies": {
     "@schedule-x/calendar-controls": "^2.23.0",
