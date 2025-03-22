@@ -36,14 +36,9 @@ const calendarApp = createCalendar({
         calendarControls,
         new ScheduleXPlugin({
             plugins: [
-                new CopyEventPlugin(eventsServicePlugin, event => {
+                new CopyEventPlugin(eventsServicePlugin, (event: CalendarEvent) => {
                     /* 
-                        {
-                            "id": 2,
-                            "start": "2023-12-23 06:00",
-                            "end": "2023-12-23 07:00",
-                            "title": "Event 2"
-                        }
+                        { "id": 2, "start": "2023-12-23 06:00", "end": "2023-12-23 07:00", "title": "Event 2" }
                     */
                     console.log(event);
                     eventsServicePlugin.add(event);
