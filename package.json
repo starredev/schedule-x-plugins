@@ -25,14 +25,11 @@
     "release": "semantic-release"
   },
   "peerDependencies": {
-    "@schedule-x/calendar-controls": "^2.23.0",
-    "@schedule-x/events-service": "^2.23.0",
     "@schedule-x/vue": "^2.21.0",
     "vue": "^3"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^12.1.2",
-    "@schedule-x/theme-default": "^2.23.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.1",
     "@semantic-release/git": "^10.0.1",
@@ -46,6 +43,7 @@
     "semantic-release": "^24.0.0",
     "typescript": "^5.2.2",
     "vite": "^6.2.2",
+    "vite-plugin-pages": "^0.32.5",
     "vue-tsc": "^2.2.8"
   },
   "dependencies": {

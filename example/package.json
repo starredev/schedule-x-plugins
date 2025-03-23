@@ -1,0 +1,21 @@
+{
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build",
+      "preview": "vite preview",
+      "deploy": "gh-pages -d dist"
+    },
+    "type": "module",
+    "dependencies": {
+        "@starredev/schedule-x-plugins": "1.2.7",
+        "@schedule-x/theme-default": "^2.23.0",
+        "@schedule-x/calendar-controls": "^2.23.0",
+        "@schedule-x/events-service": "^2.23.0",
+        "@schedule-x/vue": "^2.21.0",
+        "vue": "^3"
+    },
+    "devDependencies": {
+      "vite": "^6.2.2",
+      "@vitejs/plugin-vue": "^5.0.0"
+    }
+  }

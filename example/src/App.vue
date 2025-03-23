@@ -13,7 +13,7 @@ import {
 } from '@schedule-x/calendar'
 import { createEventsServicePlugin } from '@schedule-x/events-service'
 import { createCalendarControlsPlugin } from '@schedule-x/calendar-controls'
-import { ScheduleXPlugin, CopyEventPlugin, ZoomInPlugin } from '../src';
+import { ScheduleXPlugin, CopyEventPlugin, ZoomInPlugin } from '@starredev/schedule-x-plugins';
  
 import '@schedule-x/theme-default/dist/index.css'
 
