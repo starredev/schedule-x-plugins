@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/starredev/schedule-x-plugins/compare/v1.4.1...v1.4.2) (2025-03-23)
+
+
+### Bug Fixes
+
+* vite.config ([4b94d1b](https://github.com/starredev/schedule-x-plugins/commit/4b94d1b71b78db35ae730b333fd8e6bb69e35834))
+
 ## [1.4.1](https://github.com/starredev/schedule-x-plugins/compare/v1.4.0...v1.4.1) (2025-03-23)
 
 
