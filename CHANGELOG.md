@@ -1,3 +1,10 @@
+## [1.2.6](https://github.com/starredev/schedule-x-plugins/compare/v1.2.5...v1.2.6) (2025-03-23)
+
+
+### Bug Fixes
+
+* **copy-event-plugin:** align EventData with expected CalendarEventExternal shape ([ab74d45](https://github.com/starredev/schedule-x-plugins/commit/ab74d45f6aa4ce415a95dc516e118fdd3225578c))
+
 ## [1.2.5](https://github.com/starredev/schedule-x-plugins/compare/v1.2.4...v1.2.5) (2025-03-23)
 
 
