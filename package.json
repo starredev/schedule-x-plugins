@@ -43,7 +43,7 @@
     "sass": "^1.69.5",
     "semantic-release": "^24.0.0",
     "typescript": "^5.2.2",
-    "vite": "^5.0.8",
+    "vite": "^6.2.2",
     "vue-tsc": "^2.2.8"
   },
   "dependencies": {
@@ -51,4 +51,5 @@
     "@schedule-x/events-service": "^2.23.0",
     "@schedule-x/vue": "^2.21.0",
     "tslib": "^2.8.1"
-  }}
+  }
+}
