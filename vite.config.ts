@@ -9,18 +9,19 @@ export default defineConfig({
     plugins: [vue(), typescript({ tsconfig: './tsconfig.rollup.json' })],
     build: {
         lib: {
-        entry: resolve(__dirname, 'src/index.ts'),
-        name: 'schedule-x-plugin',
-        fileName: 'schedule-x-plugin',
+            entry: resolve(__dirname, 'src/index.ts'),
+            name: 'schedule-x-plugin',
+            fileName: (format) =>
+            format === 'es' ? 'schedule-x-plugin.mjs' : 'schedule-x-plugin.umd.js',
         },
         rollupOptions: {
-        external: ['vue', '@schedule-x/calendar'],
-        output: {
+            external: ['vue', '@schedule-x/calendar'],
+            output: {
             dir: 'dist',
             globals: {
                 vue: 'Vue',
             },
-        },
+            },
         },
     },
 })
