@@ -48,19 +48,27 @@ Some plugins depend on shared services such as eventsServicePlugin and calendarC
 
 #### 🧩 Usage
 ```ts
-import { type CalendarEvent } from '@schedule-x/calendar'
-import { createEventsServicePlugin, type EventsServicePlugin } from '@schedule-x/events-service'
-import { CopyEventPlugin } from '@starredev/schedule-x-plugins';
+import { createCalendar } from '@schedule-x/calendar'
+import { createEventsServicePlugin } from '@schedule-x/events-service'
+import { CopyEventPlugin } from '@starredev/schedule-x-plugins'
 
-// Callback after an event is copied + repositioned
-const onEventCopied = (event: CalendarEvent) => {
-  console.log('Copied Event:', event);
-  // Optionally: save to backend or add to calendar
-};
+const eventsServicePlugin = createEventsServicePlugin()
 
-const eventsServicePlugin: EventsServicePlugin = createEventsServicePlugin()
+const calendarApp = createCalendar({
+  // calendar config...
 
-const copyPlugin = new CopyEventPlugin(eventsServicePlugin, onEventCopied);
+  plugins: [
+    eventsServicePlugin,
+    new ScheduleXPlugin({
+      plugins: [
+        new CopyEventPlugin(eventsServicePlugin, event => {
+            console.log(event);
+            eventsServicePlugin.add(event);
+        })
+      ]
+    })
+  ]
+})
 ```
 
 ### `ZoomInPlugin`
@@ -76,16 +84,28 @@ const copyPlugin = new CopyEventPlugin(eventsServicePlugin, onEventCopied);
 #### 🧩 Usage
 
 ```ts
-import { ZoomInPlugin } from '@starredev/schedule-x-plugins';
-import { createCalendarControlsPlugin, type CalendarControlsPlugin } from '@schedule-x/calendar-controls'
+import { createCalendar } from '@schedule-x/calendar'
+import { ZoomInPlugin } from '@starredev/schedule-x-plugins'
+import { createCalendarControlsPlugin} from '@schedule-x/calendar-controls'
 
-const calendarControls: CalendarControlsPlugin = createCalendarControlsPlugin()
+const calendarControls = createCalendarControlsPlugin()
 
-// Uses default zoom config
-const zoomPlugin = new ZoomInPlugin(calendarControls);
+const calendarApp = createCalendar({
+  // calendar config...
+
+  plugins: [
+    eventsServicePlugin,
+    calendarControls,
+    new ScheduleXPlugin({
+      plugins: [
+          new ZoomInPlugin(calendarControls)
+      ]
+    })
+  ],
+})
 
 // Optional: Custom zoom settings
-const zoomPluginCustom = new ZoomInPlugin(calendarControls, {
+new ZoomInPlugin(calendarControls, {
   zoomFactor: 1,         // Initial zoom (default: 1)
   minZoom: 0.5,          // Minimum zoom (default: 0.5)
   maxZoom: 2,            // Maximum zoom (default: 2)

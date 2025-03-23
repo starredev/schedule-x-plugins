@@ -5,6 +5,7 @@
   "main": "./dist/schedule-x-plugin.umd.js",
   "module": "./dist/schedule-x-plugin.mjs",
   "types": "./dist/types/index.d.ts",
+  "type": "module",
   "publishConfig": {
     "access": "public"
   },
@@ -24,12 +25,13 @@
     "release": "semantic-release"
   },
   "peerDependencies": {
+    "@schedule-x/calendar-controls": "^2.23.0",
+    "@schedule-x/events-service": "^2.23.0",
+    "@schedule-x/vue": "^2.21.0",
     "vue": "^3"
   },
   "devDependencies": {
-    "@fontsource/open-sans": "^5.0.20",
     "@rollup/plugin-typescript": "^12.1.2",
-    "@schedule-x/eslint-config": "^2.18.0",
     "@schedule-x/theme-default": "^2.23.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.1",
@@ -47,9 +49,6 @@
     "vue-tsc": "^2.2.8"
   },
   "dependencies": {
-    "@schedule-x/calendar-controls": "^2.23.0",
-    "@schedule-x/events-service": "^2.23.0",
-    "@schedule-x/vue": "^2.21.0",
     "tslib": "^2.8.1"
   }
 }

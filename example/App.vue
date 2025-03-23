@@ -2,7 +2,7 @@
     <ScheduleXCalendar :calendar-app="calendarApp" />
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ScheduleXCalendar } from '@schedule-x/vue'
 import {
   createCalendar,

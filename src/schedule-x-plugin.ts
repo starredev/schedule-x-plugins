@@ -28,12 +28,22 @@ export interface ScheduleXPluginOptions {
      * An optional array of plugins to register.
      */
     plugins?: Plugin[];
+
+    /**
+     * Optional custom name for the plugin manager.
+     */
+    name?: string;
 }
 
 /**
  * Manages ScheduleX plugins and their lifecycle hooks.
  */
-export class ScheduleXPlugin {
+export class ScheduleXPlugin implements Plugin {
+    /**
+     * The name of the plugin manager.
+     */
+    name: string;
+
     /**
      * Internal list of registered plugins.
      */
@@ -44,18 +54,29 @@ export class ScheduleXPlugin {
      * 
      * @param options - Options for configuring plugins.
      */
-    constructor({ plugins = [] }: ScheduleXPluginOptions = {}) {
+    constructor({ plugins = [], name = 'scheduleXPluginManager' }: ScheduleXPluginOptions = {}) {
         this.plugins = plugins;
+        this.name = name;
     }
 
     /**
-     * Calls lifecycle hooks (beforeRender and onRender) of all registered plugins.
+     * Calls the beforeRender lifecycle hook of all registered plugins.
      * 
      * @param $app - The application instance passed to plugins.
      */
-    onRender($app: any) {
+    beforeRender($app: any): void {
         this.plugins.forEach(plugin => {
             plugin.beforeRender?.($app);
+        });
+    }
+
+    /**
+     * Calls the onRender lifecycle hook of all registered plugins.
+     * 
+     * @param $app - The application instance passed to plugins.
+     */
+    onRender($app: any): void {
+        this.plugins.forEach(plugin => {
             plugin.onRender?.($app);
         });
     }

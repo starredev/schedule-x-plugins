@@ -2,6 +2,7 @@
  * Represents the structure of an event's data.
  */
 interface EventData {
+  id: string | number;
   start: string;
   end: string;
   [key: string]: any;
@@ -11,7 +12,7 @@ interface EventData {
  * Service to retrieve event data by ID.
  */
 interface EventsService {
-  get(id: number): EventData;
+  get(id: number): EventData | undefined;
 }
 
 /**
