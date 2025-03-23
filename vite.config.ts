@@ -11,15 +11,6 @@ export default defineConfig({
             name: 'schedule-x-plugin',
             fileName: (format) =>
             format === 'es' ? 'schedule-x-plugin.mjs' : 'schedule-x-plugin.umd.js',
-        },
-        rollupOptions: {
-            external: ['vue', '@schedule-x/calendar'],
-            output: {
-            dir: 'dist',
-            globals: {
-                vue: 'Vue',
-            },
-            },
-        },
+        }
     },
 })
