@@ -4,7 +4,6 @@ import typescript from '@rollup/plugin-typescript'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    root: 'example',
     plugins: [typescript({ tsconfig: './tsconfig.rollup.json' })],
     build: {
         lib: {
