@@ -49,7 +49,7 @@ export class ScheduleXPlugin {
     }
 
     /**
-     * Calls lifecycle hooks (`beforeRender` and `onRender`) of all registered plugins.
+     * Calls lifecycle hooks (beforeRender and onRender) of all registered plugins.
      * 
      * @param $app - The application instance passed to plugins.
      */

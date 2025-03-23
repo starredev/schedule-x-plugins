@@ -1,7 +1,7 @@
 {
   "name": "@starredev/schedule-x-plugins",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.2.4",
   "main": "./dist/schedule-x-plugin.umd.js",
   "module": "./dist/schedule-x-plugin.mjs",
   "types": "./dist/types/index.d.ts",
@@ -27,25 +27,28 @@
     "vue": "^3"
   },
   "devDependencies": {
+    "@fontsource/open-sans": "^5.0.20",
     "@rollup/plugin-typescript": "^12.1.2",
-    "@schedule-x/calendar": "2.23.0",
-    "@schedule-x/calendar-controls": "^2.23.0",
-    "@schedule-x/events-service": "^2.23.0",
+    "@schedule-x/eslint-config": "^2.18.0",
     "@schedule-x/theme-default": "^2.23.0",
-    "@schedule-x/vue": "^2.21.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.1",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/npm": "^12.0.1",
     "@semantic-release/release-notes-generator": "^14.0.3",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
     "@vitejs/plugin-vue": "^5.0.0",
+    "release-it": "^18.1.2",
     "sass": "^1.69.5",
-    "semantic-release": "^24.2.3",
+    "semantic-release": "^24.0.0",
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
     "vue-tsc": "^2.2.8"
   },
   "dependencies": {
+    "@schedule-x/calendar-controls": "^2.23.0",
+    "@schedule-x/events-service": "^2.23.0",
+    "@schedule-x/vue": "^2.21.0",
     "tslib": "^2.8.1"
-  }
-}
+  }}
