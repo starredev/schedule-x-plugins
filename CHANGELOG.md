@@ -1,3 +1,11 @@
+## [1.2.7](https://github.com/starredev/schedule-x-plugins/compare/v1.2.6...v1.2.7) (2025-03-23)
+
+
+### Bug Fixes
+
+* **build:** correct esm output file and exports entry ([4264cee](https://github.com/starredev/schedule-x-plugins/commit/4264ceefc9b2be2ea4fd43b0f4f7f71bb785f0b6))
+* **build:** correct esm output file and exports entry ([6871ee8](https://github.com/starredev/schedule-x-plugins/commit/6871ee853e2be3830a8fdbb1a184cfc116ca1b0c))
+
 ## [1.2.6](https://github.com/starredev/schedule-x-plugins/compare/v1.2.5...v1.2.6) (2025-03-23)
 
 
