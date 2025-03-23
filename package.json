@@ -20,27 +20,19 @@
     "format": "prettier --write .",
     "test": "cypress run",
     "build:publish": "npm run build && npm publish",
-    "prepublishOnly": "npm run build",
-    "release:patch": "npm version patch -m 'chore(release): %s'",
-    "release:minor": "npm version minor -m 'chore(release): %s'",
-    "release:major": "npm version major -m 'chore(release): %s'",
-    "release:push": "git push && git push --tags",
-    "release": "release-it"
+    "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
-    "@schedule-x/calendar": "2.23.0",
-    "@schedule-x/date-picker": "2.23.0",
     "vue": "^3"
   },
   "devDependencies": {
-    "@fontsource/open-sans": "^5.0.20",
     "@rollup/plugin-typescript": "^12.1.2",
-    "@schedule-x/eslint-config": "^2.18.0",
     "@schedule-x/theme-default": "^2.23.0",
-    "@typescript-eslint/eslint-plugin": "^8.0.0",
-    "@typescript-eslint/parser": "^8.0.0",
+    "@schedule-x/calendar-controls": "^2.23.0",
+    "@schedule-x/events-service": "^2.23.0",
+    "@schedule-x/calendar": "2.23.0",
+    "@schedule-x/vue": "^2.21.0",
     "@vitejs/plugin-vue": "^5.0.0",
-    "release-it": "^18.1.2",
     "sass": "^1.69.5",
     "semantic-release": "^24.0.0",
     "typescript": "^5.2.2",
@@ -48,9 +40,6 @@
     "vue-tsc": "^2.2.8"
   },
   "dependencies": {
-    "@schedule-x/calendar-controls": "^2.23.0",
-    "@schedule-x/events-service": "^2.23.0",
-    "@schedule-x/vue": "^2.21.0",
     "tslib": "^2.8.1"
   }
 }
