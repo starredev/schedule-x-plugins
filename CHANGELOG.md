@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/starredev/schedule-x-plugins/compare/v1.2.3...v1.2.4) (2025-03-23)
+
+
+### Bug Fixes
+
+* jsdocs main plugin ([ca51217](https://github.com/starredev/schedule-x-plugins/commit/ca512174de7107fa9091e1ce7e3dc35c2755f843))
+
 # 1.0.0 (2025-03-23)
 
 
