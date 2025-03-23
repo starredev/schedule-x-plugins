@@ -27,11 +27,11 @@ Some plugins depend on shared services such as eventsServicePlugin and calendarC
 - [Events Service Plugin](https://schedule-x.dev/docs/calendar/plugins/events-service)
 - [Calendar controls](https://schedule-x.dev/docs/calendar/plugins/calendar-controls)
 
-
 ### `Boilerplates`
 [VueJS Example](https://schedule-x.dev/docs/calendar/plugins/events-service)
 
 ### `CopyEventPlugin`
+![image](https://s8.ezgif.com/tmp/ezgif-8217905718e5f5.gif)
 
 🧠 **Purpose**: Enables users to right-click and drag to **duplicate** existing events in the calendar.
 
@@ -72,6 +72,7 @@ const calendarApp = createCalendar({
 ```
 
 ### `ZoomInPlugin`
+![image](https://s8.ezgif.com/tmp/ezgif-828c943e7e9645.gif)
 
 🔎 **Purpose**: Adds mouse wheel zooming (with `Ctrl`) to the calendar time grid.
 
