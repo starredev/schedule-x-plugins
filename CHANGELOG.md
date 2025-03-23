@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/starredev/schedule-x-plugins/compare/v1.2.7...v1.3.0) (2025-03-23)
+
+
+### Features
+
+* added example pages ([ca53ea1](https://github.com/starredev/schedule-x-plugins/commit/ca53ea18f929cfbccd43388b63a0805c06cc2c76))
+
 ## [1.2.7](https://github.com/starredev/schedule-x-plugins/compare/v1.2.6...v1.2.7) (2025-03-23)
 
 
