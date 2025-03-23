@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/starredev/schedule-x-plugins/compare/v1.2.4...v1.2.5) (2025-03-23)
+
+
+### Bug Fixes
+
+* example file and release dependencies ([e872d96](https://github.com/starredev/schedule-x-plugins/commit/e872d96a5b2acf19ca391401a2e40a9796ed3df8))
+
 ## [1.2.4](https://github.com/starredev/schedule-x-plugins/compare/v1.2.3...v1.2.4) (2025-03-23)
 
 
