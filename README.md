@@ -11,6 +11,8 @@ Thanks to its robust plugin system, I've been able to build a few custom plugins
 - 🖱 **Drag-to-Copy**: Users often need to duplicate existing events rather than create new ones from scratch.
 - 🔍 **Zoom Control**: In dense schedules, users want to zoom in for focus or zoom out for a broader overview.
 
+Example at: https://starredev.github.io/schedule-x-plugins/
+
 ---
 
 ## 📦 Installation
@@ -31,7 +33,6 @@ Some plugins depend on shared services such as eventsServicePlugin and calendarC
 [VueJS Example](https://schedule-x.dev/docs/calendar/plugins/events-service)
 
 ### `CopyEventPlugin`
-![image](https://s8.ezgif.com/tmp/ezgif-8217905718e5f5.gif)
 
 🧠 **Purpose**: Enables users to right-click and drag to **duplicate** existing events in the calendar.
 
@@ -59,20 +60,15 @@ const calendarApp = createCalendar({
 
   plugins: [
     eventsServicePlugin,
-    new ScheduleXPlugin({
-      plugins: [
-        new CopyEventPlugin(eventsServicePlugin, event => {
-            console.log(event);
-            eventsServicePlugin.add(event);
-        })
-      ]
+    new CopyEventPlugin(eventsServicePlugin, event => {
+        console.log(event);
+        eventsServicePlugin.add(event);
     })
   ]
 })
 ```
 
 ### `ZoomInPlugin`
-![image](https://s8.ezgif.com/tmp/ezgif-828c943e7e9645.gif)
 
 🔎 **Purpose**: Adds mouse wheel zooming (with `Ctrl`) to the calendar time grid.
 
@@ -97,11 +93,7 @@ const calendarApp = createCalendar({
   plugins: [
     eventsServicePlugin,
     calendarControls,
-    new ScheduleXPlugin({
-      plugins: [
-          new ZoomInPlugin(calendarControls)
-      ]
-    })
+    new ZoomInPlugin(calendarControls)
   ],
 })
 
