@@ -1,3 +1,10 @@
+## [1.4.3](https://github.com/starredev/schedule-x-plugins/compare/v1.4.2...v1.4.3) (2025-03-24)
+
+
+### Bug Fixes
+
+* remove example ([4dffc3c](https://github.com/starredev/schedule-x-plugins/commit/4dffc3c11f0d0bed029cd0b70232f4d66dfa461a))
+
 ## [1.4.3](https://github.com/starredev/schedule-x-plugins/compare/v1.4.2...v1.4.3) (2025-03-23)
 
 

@@ -1,7 +1,7 @@
 {
   "name": "@starredev/schedule-x-plugins",
   "license": "MIT",
-  "version": "1.2.8",
+  "version": "1.4.3",
   "main": "./dist/schedule-x-plugin.umd.js",
   "module": "./dist/schedule-x-plugin.mjs",
   "types": "./dist/types/index.d.ts",
