@@ -1,3 +1,10 @@
+## [1.4.4](https://github.com/starredev/schedule-x-plugins/compare/v1.4.3...v1.4.4) (2025-03-24)
+
+
+### Bug Fixes
+
+* trigger patch release ([60ff64a](https://github.com/starredev/schedule-x-plugins/commit/60ff64a167ba4f884565df0671caf898650a2e65))
+
 ## [1.4.3](https://github.com/starredev/schedule-x-plugins/compare/v1.4.2...v1.4.3) (2025-03-24)
 
 
