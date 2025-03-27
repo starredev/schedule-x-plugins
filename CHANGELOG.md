@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/starredev/schedule-x-plugins/compare/v1.4.4...v1.5.0) (2025-03-27)
+
+
+### Features
+
+* update deps ([f4141af](https://github.com/starredev/schedule-x-plugins/commit/f4141afa063cc96da1cbff4cd23dbcbebe2510e8))
+
 ## [1.4.4](https://github.com/starredev/schedule-x-plugins/compare/v1.4.3...v1.4.4) (2025-03-24)
 
 
