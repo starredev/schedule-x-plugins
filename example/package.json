@@ -7,11 +7,11 @@
     },
     "type": "module",
     "dependencies": {
-        "@starredev/schedule-x-plugins": "1.2.7",
-        "@schedule-x/theme-default": "^2.23.0",
-        "@schedule-x/calendar-controls": "^2.23.0",
-        "@schedule-x/events-service": "^2.23.0",
-        "@schedule-x/vue": "^2.21.0",
+        "@starredev/schedule-x-plugins": "1.4.4",
+        "@schedule-x/theme-default": "^2.24.0",
+        "@schedule-x/calendar-controls": "^2.24.0",
+        "@schedule-x/events-service": "^2.24.0",
+        "@schedule-x/vue": "^2.22.0",
         "vue": "^3"
     },
     "devDependencies": {

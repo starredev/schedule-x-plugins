@@ -25,7 +25,6 @@
     "release": "semantic-release"
   },
   "peerDependencies": {
-    "@schedule-x/vue": "^2.21.0",
     "vue": "^3"
   },
   "devDependencies": {
