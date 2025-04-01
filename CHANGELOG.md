@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/starredev/schedule-x-plugins/compare/v1.5.0...v1.6.0) (2025-04-01)
+
+
+### Features
+
+* onzoom callback ([2a3e314](https://github.com/starredev/schedule-x-plugins/commit/2a3e3143eceacfcea1976ce28c9fea35bc4b724d))
+
 # [1.5.0](https://github.com/starredev/schedule-x-plugins/compare/v1.4.4...v1.5.0) (2025-03-27)
 
 
