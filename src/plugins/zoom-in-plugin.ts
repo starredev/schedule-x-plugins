@@ -17,6 +17,9 @@ type ZoomInPluginOptions = {
 
   /** Base height of the grid before zooming (default: 900) */
   baseGridHeight?: number;
+
+  /** Callback triggered after zoom is applied */
+  onZoom?: (zoomFactor: number) => void;
 };
 
 /**
@@ -42,12 +45,16 @@ export class ZoomInPlugin {
   /** Default base grid height (in pixels) */
   private baseGridHeight: number;
 
+  private wasZooming = false; // <-- track zooming
+
   /**
    * Creates an instance of ZoomInPlugin.
    * 
    * @param calendarControls - Controls object used to update calendar settings (e.g., setWeekOptions).
    * @param options - Optional configuration for zoom behavior.
    */
+  private onZoom?: (zoomFactor: number) => void;
+
   constructor(
     private calendarControls: any,
     options: ZoomInPluginOptions = {}
@@ -57,8 +64,8 @@ export class ZoomInPlugin {
     this.maxZoom = options.maxZoom ?? 2;
     this.zoomStep = options.zoomStep ?? 0.2;
     this.baseGridHeight = options.baseGridHeight ?? 900;
+    this.onZoom = options.onZoom;
   }
-
   /**
    * Registers the wheel event listener to enable zooming.
    * Should be called when the plugin is rendered/activated.
@@ -67,6 +74,7 @@ export class ZoomInPlugin {
     document.addEventListener('wheel', this.handleZoom.bind(this), {
       passive: false,
     });
+    document.addEventListener('keyup', this.handleKeyUp.bind(this)); 
   }
 
   /**
@@ -89,22 +97,31 @@ export class ZoomInPlugin {
    */
   private handleZoom(e: WheelEvent): void {
     if (!e.ctrlKey) return;
-
+  
     e.preventDefault();
-
+  
     const isZoomingIn = e.deltaY < 0;
     const zoomDelta = isZoomingIn ? this.zoomStep : -this.zoomStep;
     const proposedZoom = this.zoomFactor + zoomDelta;
-
+  
     this.zoomFactor = this.clamp(proposedZoom, this.minZoom, this.maxZoom);
-
+  
     const proposedHeight = this.baseGridHeight * this.zoomFactor;
-
+  
     const updatedOptions = {
       ...this.calendarControls,
       gridHeight: proposedHeight,
     };
-
+  
     this.calendarControls.setWeekOptions(updatedOptions);
+  
+    this.wasZooming = true; 
+  }
+
+  private handleKeyUp(e: KeyboardEvent): void {
+    if (e.key === 'Control' && this.wasZooming) {
+      this.wasZooming = false;
+      this.onZoom?.(this.zoomFactor); 
+    }
   }
 }

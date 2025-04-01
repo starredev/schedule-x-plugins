@@ -13,7 +13,7 @@ import {
 } from '@schedule-x/calendar'
 import { createEventsServicePlugin } from '@schedule-x/events-service'
 import { createCalendarControlsPlugin } from '@schedule-x/calendar-controls'
-import { CopyEventPlugin, ZoomInPlugin } from '@starredev/schedule-x-plugins';
+import { CopyEventPlugin, ZoomInPlugin } from '../../src';
  
 import '@schedule-x/theme-default/dist/index.css'
 
@@ -42,7 +42,11 @@ const calendarApp = createCalendar({
             console.log(event);
             eventsServicePlugin.add(event);
         }),
-        new ZoomInPlugin(calendarControls)
+        new ZoomInPlugin(calendarControls, {
+            onZoom: (event) => {
+                console.log(event);
+            }
+        })
     ],
 
     events: [
