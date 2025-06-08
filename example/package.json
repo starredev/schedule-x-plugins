@@ -1,21 +1,22 @@
 {
     "scripts": {
-      "dev": "vite",
-      "build": "vite build",
-      "preview": "vite preview",
-      "deploy": "gh-pages -d dist"
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "deploy": "gh-pages -d dist"
     },
     "type": "module",
     "dependencies": {
-        "@starredev/schedule-x-plugins": "1.4.4",
-        "@schedule-x/theme-default": "^2.24.0",
         "@schedule-x/calendar-controls": "^2.24.0",
+        "@schedule-x/drag-and-drop": "^2.32.0",
         "@schedule-x/events-service": "^2.24.0",
+        "@schedule-x/theme-default": "^2.24.0",
         "@schedule-x/vue": "^2.22.0",
+        "@starredev/schedule-x-plugins": "1.4.4",
         "vue": "^3"
     },
     "devDependencies": {
-      "vite": "^6.2.2",
-      "@vitejs/plugin-vue": "^5.0.0"
+        "@vitejs/plugin-vue": "^5.0.0",
+        "vite": "^6.2.2"
     }
-  }
+}

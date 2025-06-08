@@ -46,6 +46,7 @@
     "vue-tsc": "^2.2.8"
   },
   "dependencies": {
-    "tslib": "^2.8.1"
+    "tslib": "^2.8.1",
+    "uuidv4": "^6.2.13"
   }
 }

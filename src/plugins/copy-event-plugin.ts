@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'uuid';
+
 /**
  * Represents the structure of an event's data.
  */
@@ -334,10 +336,12 @@ export class CopyEventPlugin {
 
     return {
       ...event,
+      id: uuidv4(), // 🔁 generate new ID for the copied event
       start: this.formatDateTime(newStart),
       end: this.formatDateTime(newEnd)
     };
   }
+
 
   /**
    * Formats a Date object into a "YYYY-MM-DD HH:mm" string.
