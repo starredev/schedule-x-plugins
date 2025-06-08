@@ -12,7 +12,7 @@ interface EventData {
  * Service to retrieve event data by ID.
  */
 interface EventsService {
-  get(id: number): EventData | undefined;
+  get(id: number | string): EventData | undefined;
 }
 
 /**
