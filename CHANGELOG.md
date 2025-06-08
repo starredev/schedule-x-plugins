@@ -1,3 +1,10 @@
+## [1.6.2](https://github.com/starredev/schedule-x-plugins/compare/v1.6.1...v1.6.2) (2025-06-08)
+
+
+### Bug Fixes
+
+* collision with drag and drop plugin ([fe52817](https://github.com/starredev/schedule-x-plugins/commit/fe528176bc079bed3a99f293085450f008cfe1e8))
+
 ## [1.6.1](https://github.com/starredev/schedule-x-plugins/compare/v1.6.0...v1.6.1) (2025-06-08)
 
 
