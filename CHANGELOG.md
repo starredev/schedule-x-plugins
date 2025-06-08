@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/starredev/schedule-x-plugins/compare/v1.6.0...v1.6.1) (2025-06-08)
+
+
+### Bug Fixes
+
+* support string IDs in CopyEventPlugin ([4c8a5cb](https://github.com/starredev/schedule-x-plugins/commit/4c8a5cb7c683a2b7ea7fbc8d73c89ed493c7234b))
+
 # [1.6.0](https://github.com/starredev/schedule-x-plugins/compare/v1.5.0...v1.6.0) (2025-04-01)
 
 
