@@ -67,22 +67,32 @@ export class CopyEventPlugin {
     const eventElement = (e.target as HTMLElement).closest(".sx__event") as HTMLElement;
 
     if ((e.target as HTMLElement).closest(".sx__date-grid")) {
-      return;
+        return;
     }
 
     if (!eventElement) {
-      return;
+        return;
     }
 
     e.preventDefault();
 
-    const eventId = Number(eventElement.getAttribute("data-event-id"));
-    const eventData = this.config.eventsService.get(eventId);
+    const rawId = eventElement.getAttribute("data-event-id");
+    
+    if (!rawId) return;
+
+    const parsedId = /^\d+$/.test(rawId) ? Number(rawId) : rawId;
+
+    let eventData = this.config.eventsService.get(parsedId);
+
+    if (eventData === undefined && typeof parsedId === "number") {
+        eventData = this.config.eventsService.get(String(parsedId));
+    }
 
     if (eventData) {
-      this.startDrag(eventElement, eventData, e);
+        this.startDrag(eventElement, eventData, e);
     }
   };
+
 
   /**
    * Clones the event element and prepares it for dragging.

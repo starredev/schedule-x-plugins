@@ -14,7 +14,7 @@ import {
 import { createEventsServicePlugin } from '@schedule-x/events-service'
 import { createCalendarControlsPlugin } from '@schedule-x/calendar-controls'
 import { createDragAndDropPlugin } from '@schedule-x/drag-and-drop'
-import { CopyEventPlugin, ZoomInPlugin } from '../../src';
+import { CopyEventPlugin, ZoomInPlugin } from '../../../src';
  
 import '@schedule-x/theme-default/dist/index.css'
 

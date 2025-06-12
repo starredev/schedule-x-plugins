@@ -23,5 +23,8 @@ pnpm-debug.log*
 .DS_Store
 
 # Optional: skip local playground
-example/node_modules/
-example/dist/
+example/vue/node_modules/
+example/vue/dist/
+
+example/react/node_modules/
+example/react/dist/
