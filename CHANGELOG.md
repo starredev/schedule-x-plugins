@@ -1,3 +1,10 @@
+## [1.6.3](https://github.com/starredev/schedule-x-plugins/compare/v1.6.2...v1.6.3) (2025-06-12)
+
+
+### Bug Fixes
+
+* copy item which is copied earlier ([f6e157a](https://github.com/starredev/schedule-x-plugins/commit/f6e157acb1529f39f3d74ea4bc003dab8ca480d0))
+
 ## [1.6.2](https://github.com/starredev/schedule-x-plugins/compare/v1.6.1...v1.6.2) (2025-06-08)
 
 
