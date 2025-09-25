@@ -1,3 +1,10 @@
+## [1.6.4](https://github.com/starredev/schedule-x-plugins/compare/v1.6.3...v1.6.4) (2025-09-25)
+
+
+### Bug Fixes
+
+* copying issue on unix systems ([765bdd1](https://github.com/starredev/schedule-x-plugins/commit/765bdd1b576616fe566373648e7eb6b0dcc11f15))
+
 ## [1.6.3](https://github.com/starredev/schedule-x-plugins/compare/v1.6.2...v1.6.3) (2025-06-12)
 
 
