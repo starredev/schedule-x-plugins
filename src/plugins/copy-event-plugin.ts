@@ -64,6 +64,12 @@ export class CopyEventPlugin {
    * Handles right-clicks on events to start the copy-drag.
    */
   private handleContextMenu = (e: MouseEvent): void => {
+    if (this.draggedElement) {
+      e.preventDefault();
+      this.abortDrag();
+      return;
+    }
+
     const eventElement = (e.target as HTMLElement).closest(".sx__event") as HTMLElement;
 
     if ((e.target as HTMLElement).closest(".sx__date-grid")) {
@@ -89,7 +95,9 @@ export class CopyEventPlugin {
     }
 
     if (eventData) {
-        this.startDrag(eventElement, eventData, e);
+        setTimeout(() => {
+          this.startDrag(eventElement, eventData, e);
+        }, 10);
     }
   };
 
@@ -144,12 +152,11 @@ export class CopyEventPlugin {
       return;
     }
 
-    if ((e.target as HTMLElement).closest(".sx__calendar-header")) {
+    if (e.button !== 0) {
       return;
     }
 
-    if (e.button === 2) {
-      this.abortDrag();
+    if ((e.target as HTMLElement).closest(".sx__calendar-header")) {
       return;
     }
 
