@@ -309,7 +309,7 @@ export class CopyEventPlugin {
     const hour = Array.from(document.querySelectorAll(".sx__week-grid__hour"))
       .reduce((closest, el) => {
         const rect = (el as HTMLElement).getBoundingClientRect();
-        const distance = Math.abs(y - rect.top);
+        const distance = Math.abs(y - (rect.top + window.scrollY));
 
         return distance < closest.distance
           ? { element: el as HTMLElement, distance }
