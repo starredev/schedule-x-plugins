@@ -8,6 +8,7 @@ import {
 import { createDragAndDropPlugin } from '@schedule-x/drag-and-drop'
 import { createScrollControllerPlugin } from '@schedule-x/scroll-controller'
 import { createEventsServicePlugin } from '@schedule-x/events-service'
+import { createResizePlugin } from "@schedule-x/resize";
 import { CopyEventPlugin } from '../../../src'
 
 import '@schedule-x/theme-default/dist/index.css'
@@ -47,6 +48,7 @@ function App() {
     
     plugins: [
       createDragAndDropPlugin(30),
+      createResizePlugin(15),
       createScrollControllerPlugin(),
       eventsServicePlugin,
       new CopyEventPlugin(eventsServicePlugin, event => {
