@@ -14,6 +14,7 @@ import {
 import { createEventsServicePlugin } from '@schedule-x/events-service'
 import { createCalendarControlsPlugin } from '@schedule-x/calendar-controls'
 import { createDragAndDropPlugin } from '@schedule-x/drag-and-drop'
+import { createResizePlugin } from "@schedule-x/resize";
 import { CopyEventPlugin, ZoomInPlugin } from '../../../src';
  
 import '@schedule-x/theme-default/dist/index.css'
@@ -38,6 +39,7 @@ const calendarApp = createCalendar({
 
     plugins: [
         createDragAndDropPlugin(30),
+        createResizePlugin(15),
         eventsServicePlugin,
         calendarControls,
         new CopyEventPlugin(eventsServicePlugin, event => {
