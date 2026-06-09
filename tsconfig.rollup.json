@@ -6,10 +6,10 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "rootDir": "./src",
 
     "strict": true,
     "noUnusedLocals": true,
